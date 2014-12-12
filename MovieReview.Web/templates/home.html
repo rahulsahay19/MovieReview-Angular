@@ -1,0 +1,47 @@
+﻿<div>
+    <div class="jumbotron">
+        <h1>Movie-Reviews</h1>
+        <p class="lead">Movie-Reviews is a n-tier app just to showcase how to use bunch of technologies and design patterns together to make a robust End To End App</p>
+        <p><a href="http://myview.rahulnivi.net" class="btn btn-primary btn-large">Learn more on this &raquo;</a></p>
+    </div>
+    
+    
+    <div>Total Movies:- {{data.movies.length}}</div>
+
+    <div data-wc-overlay="" data-wc-overlay-delay="300" style="top: 315.5px; left: 618px;" data-ng-show="isBusy">
+        <br /><img src="/Content/images/spinner.gif" />&nbsp;&nbsp;Loading
+    </div>
+
+    <!--<div class="progress progress-bar-success progress-striped active" data-ng-show="isBusy">
+        <div class="text-center text-danger" style="width:100%"> Fetching info </div>
+    </div>-->
+    
+    <br/>
+ 
+   
+    <br/>
+    <div class="row" data-ng-repeat="i in data.movies">
+
+        <div class="col-md-6">
+
+            <!--<div>
+                    Movie Id:- {{i.Id}}
+                </div>-->
+            <div>
+                Movie Name:- {{i.MovieName}}
+            </div>
+            <div>
+                Director Name:- {{i.DirectorName}}
+            </div>
+            <div>
+                Release Year:- {{i.ReleaseYear}}
+            </div>
+            <div>
+                Reviews:- {{i.NoOfReviews}}
+            </div>
+            <br />
+        </div>
+
+    </div>
+    
+</div>

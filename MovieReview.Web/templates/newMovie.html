@@ -1,0 +1,29 @@
+﻿<h3>New Movie</h3>
+<form name="newMovieForm" novalidate="" class="form-inline" data-ng-submit="save()">
+    <fieldset>
+        <div class="form-group">
+            <label for="MovieName">Movie-Name</label>
+
+            <input name="MovieName" type="text" data-ng-model="newMovie.MovieName" required data-ng-minlength="5" />
+            <span class="input-validation-error" data-ng-show="newMovieForm.MovieName.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newMovieForm.MovieName.$error.minlength">Please enter 5 Charcters Title</span>
+        </div>
+        <div class="form-group">
+            <label for="DirectorName">Director-Name</label>
+            <input name="DirectorName" type="text" data-ng-model="newMovie.DirectorName" required data-ng-minlength="5" />
+            <span class="input-validation-error" data-ng-show="newMovieForm.DirectorName.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newMovieForm.title.$error.minlength">Please enter 5 Charcters Name</span>
+        </div>
+        <div class="form-group">
+            <label for="ReleaseYear">Release-Year</label>
+            <input name="ReleaseYear" type="text" data-ng-model="newMovie.ReleaseYear" required/>
+            <span class="input-validation-error" data-ng-show="newMovieForm.ReleaseYear.$error.required">*</span>
+        </div>
+       
+    </fieldset>
+    <br/>
+    <div class="form-group" >
+        <button type="submit" class="btn btn-primary" value="Save" data-ng-disabled="newMovieForm.$invalid">Save</button>
+        <a href="#/movies" class="btn btn-warning">Cancel</a>
+    </div>
+</form>

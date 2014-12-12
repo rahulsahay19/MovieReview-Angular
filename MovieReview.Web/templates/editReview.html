@@ -1,0 +1,43 @@
+﻿<h2>Edit Review</h2>
+
+<form name="newReviewEditForm" novalidate="" class="form-inline" data-ng-submit="editReview()">
+    <fieldset>
+        
+        <div class="form-group" style="display: none">
+            <label for="ReviewerID">Id</label>
+
+            <input name="ReviewerID" type="text" value="{{review.Id}}" data-ng-model="review.Id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="ReviewerName">Reviewer Name</label>
+            <input name="ReviewerName" type="text" data-ng-model="review.ReviewerName" value="{{review.ReviewerName}}" readonly required data-ng-minlength="5" />
+        </div>
+        <div class="form-group">
+            <label for="ReviewerComments">Reviewer Comments</label>
+            <input name="ReviewerComments" type="text" data-ng-model="review.ReviewerComments" value="{{review.ReviewerComments}}" required data-ng-minlength="3" />
+            <span class="input-validation-error" data-ng-show="newReviewEditForm.ReviewerComments.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newReviewEditForm.ReviewerComments.$error.minlength">Please enter 3 Charcters review</span>
+        </div>
+        <div class="form-group">
+            <label for="ReviewerRating">Reviewer Rating</label>
+
+            <input name="ReviewerRating" type="text" value="{{review.ReviewerReviewerRating}}" data-ng-model="review.ReviewerRating" required />
+            <span class="input-validation-error" data-ng-show="newReviewEditForm.ReviewerRating.$error.required">*</span>
+        </div>
+        <div class="form-group" style="display: none">
+            <label for="ReviewerMovieId">Movie Id</label>
+
+            <input name="ReviewerMovieId" type="text" value="{{review.MovieId}}" data-ng-model="review.MovieId" required readonly />
+
+        </div>
+        
+        <p>
+            <button class="btn btn-primary" type="submit" value="Edit" data-ng-disabled="newReviewEditForm.$invalid">Save</button>
+            <button class="btn btn-danger" type="button" value="{{review.Id}}" data-ng-click="deleteReview()">Delete</button>
+            <a href="#/movies" class="btn btn-warning">Cancel</a>
+            
+           
+        </p>
+    </fieldset>
+</form>

@@ -1,0 +1,36 @@
+﻿<div>
+
+    <h1> <a href="#/newMovie">Add New Movie</a></h1>
+</div>
+<br />
+<table class="table table-hover table-striped table-condensed table-bordered">
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Director Name</th>
+            <th>Release Year</th>
+            <th>Edit</th>
+            <th>Reviews</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="i in data.movies" class="repeat-animation">
+            <td>
+                {{i.MovieName}}
+            </td>
+            <td>
+                {{i.DirectorName}}
+            </td>
+            <td>
+                {{i.ReleaseYear}}
+            </td>
+            <td>
+                <a data-ng-href="#/editMovie/{{i.Id}}" class="btn">Edit</a>
+            </td>
+            <td>
+                <a data-ng-href="#/reviews/{{i.Id}}">Reviews</a>
+            </td>
+        </tr>
+  
+    </tbody>
+</table>

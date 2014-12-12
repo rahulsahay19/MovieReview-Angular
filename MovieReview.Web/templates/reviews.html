@@ -1,0 +1,69 @@
+﻿
+<h2>Reviews</h2>
+<form name="ReviewsForm" novalidate="" class="form-inline">
+    <div class="row" data-ng-repeat="i in review">
+
+        <div class="col-md-12">
+
+            <!--<div>
+                Id:- {{i.Id}}
+            </div>-->
+            <div>
+                Reviewer Name:- {{i.ReviewerName}}
+            </div>
+            <div>
+                Reviewer Comments:- {{i.ReviewerComments}}
+            </div>
+            <div>
+                Reviewer Rating:- {{i.ReviewerRating}}
+            </div>
+            <!--<div>
+                Movie Id:- {{i.MovieId}}
+            </div>-->
+            <!--<br />
+            <p>-->
+                <a data-ng-href="#/editReview/{{i.Id}}" class="btn">Edit</a>
+
+            <!--</p>-->
+            <div>
+                <!--<input class="btn btn-danger" type="submit" value="{{i.Id}}" />-->
+                <!--<button class="btn btn-danger" type="submit" value="{{i.Id}}">Delete</button>-->
+               
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+<form name="newReviewForm" novalidate="" class="form-inline" data-ng-submit="saveReview()">
+    <fieldset>
+
+        <div class="form-group">
+            <label for="ReviewerName">Reviewer Name</label>
+
+            <input name="ReviewerName" type="text" data-ng-model="newReview.ReviewerName" required data-ng-minlength="5" />
+            <span class="input-validation-error" data-ng-show="newReviewForm.ReviewerName.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newReviewForm.ReviewerName.$error.minlength">Please enter 5 Charcters Name</span>
+        </div>
+        <div class="form-group">
+            <label for="ReviewerComments">Reviewer Comments</label>
+
+            <input name="ReviewerComments" type="text" data-ng-model="newReview.ReviewerComments" required data-ng-minlength="3" />
+            <span class="input-validation-error" data-ng-show="newReviewForm.ReviewerComments.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newReviewForm.ReviewerComments.$error.minlength">Please enter 3 Charcters review</span>
+        </div>
+        <div class="form-group">
+            <label for="ReviewerRating">Reviewer Rating</label>
+
+            <input name="ReviewerRating" type="text" data-ng-model="newReview.ReviewerRating" required />
+            <span class="input-validation-error" data-ng-show="newReviewForm.ReviewerRating.$error.required">*</span>
+        </div>
+
+        <p>
+            <button class="btn btn-primary" type="submit" value="Create" data-ng-disabled="newReviewForm.$invalid">Create</button>
+            <a href="#/movies" class="btn btn-warning">Cancel</a>
+        </p>
+    </fieldset>
+</form>
+

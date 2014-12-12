@@ -1,0 +1,50 @@
+﻿<h2>Edit Movie</h2>
+
+
+<form name="newMovieEditForm" novalidate="" class="form-inline" data-ng-submit="editMovie()">
+    <fieldset>
+
+        <div class="form-group" style="display: none">
+            <label for="ReviewerID">Id</label>
+
+            <input name="ReviewerID" type="text" value="{{movie.Id}}" data-ng-model="movie.Id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="MovieName">Movie Name</label>
+            <input name="MovieName" type="text" data-ng-model="movie.MovieName" value="{{movie.MovieName}}" required />
+        </div>
+        <div class="form-group">
+            <label for="DirectorName">Director Name</label>
+            <input name="DirectorName" type="text" data-ng-model="movie.DirectorName" value="{{movie.DirectorName}}"  />
+            <span class="input-validation-error" data-ng-show="newMovieEditForm.DirectorName.$error.required">*</span>
+            <span class="input-validation-error" data-ng-show="newMovieEditForm.DirectorName.$error.minlength">Please enter 3 Movie Name</span>
+        </div>
+        <div class="form-group">
+            <label for="ReleaseYear">Release Year</label>
+
+            <input name="ReleaseYear"  type="text" value="{{movie.ReleaseYear}}" data-ng-model="movie.ReleaseYear" required />
+            <span class="input-validation-error" data-ng-show="newMovieEditForm.ReleaseYear.$error.required">*</span>
+        </div>
+       
+        <p>
+            <br/>
+            <button class="btn btn-primary" type="submit" data-ng-disabled="newMovieEditForm.$invalid" > Update</button>
+            <button class="btn btn-danger" type="button" data-ng-click="deleteMovie()">Delete</button>
+            <a href="#/movies" class="btn btn-warning">Cancel</a>
+        </p>
+    </fieldset>
+</form>
+<form name="deleteMovieForm" novalidate data-ng-submit="deleteMovie()">
+   
+            <!--<button class="btn btn-danger" type="submit" value="{{movie.Id}}">Delete</button>-->
+            <!--<a href="#/movies" class="btn btn-warning">Cancel</a>-->
+   
+</form>
+
+<!--<div id="toolbar">
+    <br/>
+    <button type="submit" class="btn btn-primary" data-ng-disabled="newMovieEditForm.$invalid" name="Save" value="Save" form="newMovieEditForm" data-ng-submit="editMovie()">Save</button>
+    <button type="submit" class="btn btn-danger" name="Delete" value="Delete" form="deleteMovieForm">Delete</button>
+    <a href="#/movies" class="btn btn-warning">Cancel</a>
+</div>-->
