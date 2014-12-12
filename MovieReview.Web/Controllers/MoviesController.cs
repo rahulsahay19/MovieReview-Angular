@@ -40,8 +40,7 @@ namespace MovieReview.Web.Controllers
             throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
         }
 
-        // OData: GET /api/movies/?directorname=\'john\''
-        // With OData query syntax we would not need such methods
+        
         // /api/movies/getbydirectorname?value=john
         [ActionName("getbydirectorname")]
         public Movie GetByDirectorName(string value)
@@ -70,10 +69,7 @@ namespace MovieReview.Web.Controllers
 
             var response = Request.CreateResponse(HttpStatusCode.Created, movie);
 
-            // Compose location header that tells how to get this session
-            // e.g. ~/api/session/5
-            // response.Headers.Location =
-            //   new Uri(Url.Link(WebApiConfig.ControllerAndId, new { id = movie.Id }));
+            
 
             return response;
         }
