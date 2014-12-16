@@ -18,7 +18,7 @@ namespace MovieReview.Web
                          "~/Scripts/angular.js",
                           "~/Scripts/angular-animate.js",
                          "~/Scripts/angular-route.js",
-                         "~/scripts/angular-sanitize.js",
+                         "~/Scripts/angular-sanitize.js",
                        "~/Scripts/toastr.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

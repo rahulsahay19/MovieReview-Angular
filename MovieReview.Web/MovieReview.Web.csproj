@@ -562,7 +562,7 @@
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular_currentVersion.js" />
+    <Content Include="Scripts\angular_latest.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
@@ -612,6 +612,11 @@
     <Content Include="templates\reviews.html" />
     <Content Include="testpage.html" />
     <None Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Web API Tests\MovieAPI.js" />
+    <Content Include="Web API Tests\MoviesAPI.html" />
+    <Content Include="Web API Tests\qunit-utils.js" />
+    <Content Include="Web API Tests\qunit.css" />
+    <Content Include="Web API Tests\qunit.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
