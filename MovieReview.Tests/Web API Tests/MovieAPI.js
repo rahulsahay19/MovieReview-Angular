@@ -6,33 +6,11 @@
     module('Web API GET Endpoints respond successfully');
 
     var apiUrls = [
-        //'/api/lookups/all',
-        //'/api/lookups/rooms',
-        //'/api/lookups/tracks',
-        //'/api/lookups/timeslots/',
+        
 
         '/api/movies/',
         '/api/moviereviews/'
-        //'/api/persons/1',
-        //'/api/favorites/1',
-        //'/api/speakers',
-
-        //'/api/sessions/',
-        //'/api/sessions/2',
-        //'/api/sessionbriefs',
-
-        // Find the Attendance with personId==2 && sessionId==1
-        //'/api/attendance/?pid=2&sid=1'
-
-        // These variations rely on Web API OData support (Future)
-
-        //'/api/lookups/timeslots/?$filter=id%20eq%203',
-        //'/api/persons/?$top=3', // 'top 3' makes test 0.2 secs faster
-        //'/api/speakers/?$filter=firstName%20eq%20\'Hans\'',
-        //'/api/sessions/?$top=3', // 'top 3' makes test ~1 second faster
-        //'/api/attendance/?$filter=personId%20eq%202%20and%20sessionId%20eq%201',
-        //'/api/attendance/?$filter=personId%20eq%202', // without spaces
-        //'/api/attendance/?$filter=personId eq 2', // with spaces
+       
     ];
 
 
